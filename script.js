@@ -95,7 +95,7 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+//return drew is will print drew in the password feild*
 }
 
 // Function to generate password with user input
