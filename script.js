@@ -90,16 +90,56 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+let length = parseInt(
+    prompt("How many characters would you like your password to contain?")
+  )
+
+  if(isNan(length) === true){
+    alert("Password length must be provided as number");
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 }
+
+
+
+// if statments 
+
+//if (lenth < 10)
+//alert (Sorry password must have a length of at least 10 characters long)
+
+//if length > 12
+//aleart (Sorry your password must be less then 12 characters long)
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-//return drew is will print drew in the password feild*
+  let randomIndex = Math.floor(Math.random() * arr.length)
+  let randomElement = arr[randomIndex];
+
+  return randomElement;
 }
 
-// Function to generate password with user input
+
+
+
+//<------return drew is will print drew in the password feild* 
+
+// Function to generate password with user input.....Button/Genertate Password
 function generatePassword() {
+  let options = getPasswordOptions();
+
+ 
 
 }
 
