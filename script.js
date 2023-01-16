@@ -94,32 +94,52 @@ let length = parseInt(
     prompt("How many characters would you like your password to contain?")
   )
 
-  if(isNan(length) === true){
-    alert("Password length must be provided as number");
+  if(isNaN(length) === true){
+    alert(`Password length must be provided as number`);
+    return;
   }
 
+  if(length < 10) {
+    alert(`Password length needs to be at least 10 characters`);
+    return;
+  }
 
+  if(length > 64) {
+    alert(`Password length must be less then 65 characters`);
+    return;
+  }
 
+  let hasSpecialCharacters = confirm
+  ("Click OK to include special characters")
 
+  let hasNumericCharacters = confirm
+  ("Click OK to include numeric characters")
 
+  let haslowerCasedCharacters = confirm
+  ("Click OK to include lower cased characters")
 
+  let hasUpperCasedCharacters = confirm
+  ("Click OK to include upper cased characters")
 
+  if(haslowerCasedCharacters === false &&
+    hasUpperCasedCharacters === false &&
+    hasSpecialCharacters === false &&
+    hasNumericCharacters === false) {
+      alert("Must select at least one character type");
+      return;
+    }
 
+  let passwordOptions = {
+    length: length,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasUpperCasedCharacters: hasUpperCasedCharacters,
+    haslowerCasedCharacters: haslowerCasedCharacters,
+    hasNumericCharacters: hasNumericCharacters
+  }
 
-
-
+  return passwordOptions;
 
 }
-
-
-
-// if statments 
-
-//if (lenth < 10)
-//alert (Sorry password must have a length of at least 10 characters long)
-
-//if length > 12
-//aleart (Sorry your password must be less then 12 characters long)
 
 
 // Function for getting a random element from an array
@@ -132,12 +152,10 @@ function getRandom(arr) {
 
 
 
-
-//<------return drew is will print drew in the password feild* 
-
 // Function to generate password with user input.....Button/Genertate Password
 function generatePassword() {
   let options = getPasswordOptions();
+  console.log(options)
 
  
 
