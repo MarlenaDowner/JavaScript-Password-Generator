@@ -35,7 +35,7 @@ The following image shows the web application's appearance and functionality:
 
 ## Links
 
-https://marlenadowner.github.io/Java-Console-Finances/
+https://marlenadowner.github.io/JavaScript-Password-Generator/
 
 https://github.com/MarlenaDowner/JavaScript-Password-Generator
 
